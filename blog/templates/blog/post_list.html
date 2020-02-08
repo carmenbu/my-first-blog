@@ -7,8 +7,16 @@
         <h1>Carmen's blog</h1>
         <h2>aprendre a programar</h2>
      </div>
+
         <p>Aquest seria un primer paràgraf de text</p>
         <p>Dins el segon paràgraf hi pot haver text en <em>cursiva</em> i text en <strong>negreta</strong></p>
         <p>El meu lloc web pot tenir enllaços a altres webs, com aquest <a href="https://djangogirls.org">link</a> </p>
     </body>
+    {% for post in posts %}
+    <h1> {{post.title}}</h1>
+    <p>publicado: {{ post.published_date }}</p>
+    <p>firma:<em> {{post.author}}</em></p>
+
+    {% endfor %}
+
 </html>
